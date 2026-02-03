@@ -15,7 +15,6 @@ Este projeto foi desenvolvido como requisito avaliativo da disciplina de **Desen
 - [Regras de Negócio](#-regras-de-negócio)
 - [Como Executar](#-como-executar)
 - [Documentação da API](#-documentação-da-api)
-- [Autores](#-autores)
 
 ---
 
