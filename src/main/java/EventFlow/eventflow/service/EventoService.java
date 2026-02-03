@@ -67,6 +67,9 @@ public class EventoService {
 
     public void delete(Integer id) {
         Evento evento = findById(id);
+        if (evento.getStatus() != StatusEvento.CANCELADO && evento.getStatus() != StatusEvento.ENCERRADO) {
+            throw new IllegalArgumentException("Você não pode excluir um evento ativo! Cancele ou encerre o evento antes de deletar.");
+        }
         repository.delete(evento);
     }
 }
