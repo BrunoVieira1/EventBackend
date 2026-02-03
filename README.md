@@ -11,10 +11,6 @@ Este projeto foi desenvolvido como requisito avaliativo da disciplina de **Desen
 - [Sobre o Projeto](#-sobre-o-projeto)
 - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
 - [Arquitetura e Padrões](#-arquitetura-e-padrões)
-- [Modelo de Dados (DER)](#-modelo-de-dados-der)
-- [Regras de Negócio](#-regras-de-negócio)
-- [Como Executar](#-como-executar)
-- [Documentação da API](#-documentação-da-api)
 
 ---
 
