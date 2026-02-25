@@ -3,17 +3,19 @@
 services:
 
   db:
-    image: postgres:15-alpine
+    image: postgres:17
     container_name: eventflow-postgres
     restart: always
+    env_file:
+      - .env
     environment:
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: ${DB_NAME}
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres_data_v2:/var/lib/postgresql/data
 
 
   api:
@@ -24,12 +26,15 @@ services:
       - "8080:8080"
     depends_on:
       - db
+    env_file:
+      - .env
     environment:
 
       DB_HOST: db
       DB_NAME: ${DB_NAME}
       DB_USER: ${DB_USER}
       DB_PASSWORD: ${DB_PASSWORD}
+      SPRING_PROFILES_ACTIVE: dev
 
 volumes:
-  postgres_data:
+  postgres_data_v2:
