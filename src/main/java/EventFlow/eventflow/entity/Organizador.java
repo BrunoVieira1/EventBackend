@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 @Entity
+@Table(name = "tb_organizador")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -23,5 +24,6 @@ public class Organizador {
     @Column(unique = true)
     private String email;
 
+    @NotNull
     private String telefone;
 }

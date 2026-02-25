@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 @Entity
+@Table(name = "tb_local")
 @Getter
 @Setter
 @NoArgsConstructor

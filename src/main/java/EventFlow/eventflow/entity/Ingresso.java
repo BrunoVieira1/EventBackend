@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 import java.math.BigDecimal;
 
 @Entity
+@Table(name = "tb_ingresso")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -30,10 +31,12 @@ public class Ingresso {
     @Enumerated(EnumType.STRING)
     private TipoIngresso tipo;
 
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "evento_id")
     private Evento evento;
 
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "participante_id")
     private Participante participante;

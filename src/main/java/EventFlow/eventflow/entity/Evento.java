@@ -9,6 +9,7 @@ import lombok.*;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "tb_evento")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -23,6 +24,7 @@ public class Evento {
     @NotNull
     private String titulo;
 
+    @NotNull
     private String descricao;
 
     @NotNull
@@ -32,11 +34,12 @@ public class Evento {
     @Enumerated(EnumType.STRING)
     private StatusEvento status = StatusEvento.ABERTO;
 
-
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "organizador_id")
     private Organizador organizador;
 
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "local_id")
     private Local local;

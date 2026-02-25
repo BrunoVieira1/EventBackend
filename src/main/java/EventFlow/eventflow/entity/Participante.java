@@ -7,6 +7,7 @@ import lombok.*;
 import java.util.List;
 
 @Entity
+@Table(name = "tb_participante")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -25,7 +26,8 @@ public class Participante {
     @Column(unique = true)
     private String email;
 
-
+    @NotNull
+    @Column(unique = true)
     private String documento;
 
     @OneToMany(mappedBy = "participante", cascade = CascadeType.REMOVE)
